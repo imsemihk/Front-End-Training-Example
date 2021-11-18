@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <title>Order summary card</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Red Hat Display', sans-serif;
+            min-height: 100vh;
+            background-image: url(images/pattern-background-desktop.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: hsl(225, 100%, 94%);
+            position: relative;
+            font-size: px;
+        }
+        
+        .container {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 450px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .text-content {
+            padding: 7%;
+            text-align: center;
+        }
+        
+        .title {
+            color: hsl(223, 47%, 23%);
+            font-weight: 900;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        .text-content p.subtitle {
+            color: #8a8a8a;
+            margin-bottom: 25px;
+        }
+        
+        .plan-box {
+            background-color: hsl(225, 100%, 98%);
+            border-radius: 12px;
+            display: flex;
+            padding: 25px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .plan-box-left {
+            display: flex;
+            align-items: center;
+            text-align: left;
+        }
+        
+        .plan-box-left div {
+            margin-left: 20px;
+        }
+        
+        .plan-box-left div h5 {
+            font-weight: 900;
+            font-size: 15px;
+            color: hsl(223, 47%, 23%);
+        }
+        
+        .plan-box-left div p {
+            font-size: 14px;
+            color: #8a8a8a;
+        }
+        
+        .plan-box a {
+            font-weight: 900;
+            color: hsl(223, 47%, 23%);
+            transition: color .3s ease;
+        }
+        
+        .plan-box a:hover {
+            text-decoration: none;
+            color: hsl(245, 75%, 52%);
+        }
+        
+        a.proceed-btn {
+            display: block;
+            text-decoration: none;
+            color: white;
+            background-color: hsl(245, 75%, 52%);
+            padding: 20px 0;
+            border-radius: 12px;
+            margin: 30px 0;
+            transition: background-color .3s ease;
+        }
+        
+        a.proceed-btn:hover {
+            background-color: hsl(224, 23%, 55%);
+        }
+        
+        a.cancel-btn {
+            color: hsl(224, 23%, 55%);
+            text-decoration: none;
+            font-weight: 900;
+            transition: color .3s ease;
+        }
+        
+        a.cancel-btn:hover {
+            color: hsl(223, 47%, 23%);
+        }
+        
+        @media only screen and (max-width: 425px) {
+            body {
+                background-image: url(images/pattern-background-mobile.svg);
+                font-size: 14px;
+            }
+            .container {
+                max-width: 87%;
+            }
+            .title {
+                font-size: 23px;
+            }
+            div.plan-box {
+                padding: 12px;
+            }
+            .plan-box-left div {
+                margin-left: 10px;
+            }
+            a.proceed-btn,
+            a.cancel-btn,
+            .plan-box a {
+                font-size: 13px;
+            }
+            .text-content {
+                padding: 9% 7%;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="hero">
+            <img src="images/illustration-hero.svg" alt="">
+        </div>
+        <div class="text-content">
+            <h2 class="title">
+                Order Summary
+            </h2>
+            <p class="subtitle">
+                You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!
+            </p>
+            <div class="plan-box">
+                <div class="plan-box-left">
+                    <img src="images/icon-music.svg" alt="">
+                    <div>
+                        <h5>Annual Plan</h5>
+                        <p>$59.99/year</p>
+                    </div>
+                </div>
+                <a href="#">Change</a>
+            </div>
+            <a href="#" class="proceed-btn">Proceed to Payment</a>
+            <a href="#" class="cancel-btn">Cancel Order</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
